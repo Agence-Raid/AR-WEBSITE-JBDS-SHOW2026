@@ -7,8 +7,8 @@ import { profiles } from '@/data/profiles';
 export default function ProfileSelection() {
   const { setCurrentView, setSelectedProfile } = useApp();
 
-  const handleProfileClick = (profileId: string) => {
-    setSelectedProfile(profileId);
+  const handleProfileClick = (profile: typeof profiles[0]) => {
+    setSelectedProfile(profile);
     setTimeout(() => {
       setCurrentView('homepage');
     }, 300);
@@ -24,7 +24,7 @@ export default function ProfileSelection() {
           {profiles.map((profile) => (
             <button
               key={profile.id}
-              onClick={() => handleProfileClick(profile.id)}
+              onClick={() => handleProfileClick(profile)}
               className="group flex flex-col items-center gap-3 active:scale-95 transition-transform touch-manipulation"
             >
               <div className="relative w-full aspect-square max-w-[160px] rounded-lg overflow-hidden border-4 border-gray-700 group-active:border-white transition-all">

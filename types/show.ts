@@ -1,3 +1,5 @@
+import { Dancer } from './dancer';
+
 export interface Show {
   id: number;
   title: string;
@@ -7,5 +9,5 @@ export interface Show {
   category: string;
   description: string;
   duration: string;
-  dancers: string[];
+  dancers: Dancer[];
 }

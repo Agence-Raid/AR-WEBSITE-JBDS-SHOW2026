@@ -34,6 +34,10 @@ export default function ShowDetailPage() {
     (s) => s.category === show.category && s.id !== show.id
   );
 
+  // Trouver le prochain show dans l'ordre
+  const currentIndex = allShows.findIndex((s) => s.id === show.id);
+  const nextShow = currentIndex < allShows.length - 1 ? allShows[currentIndex + 1] : null;
+
   return (
     <div className="fixed inset-0 bg-black overflow-y-auto overflow-x-hidden">
       <Header showBackButton backHref="/programme" variant="transparent" />
@@ -86,17 +90,63 @@ export default function ShowDetailPage() {
           {/* Dancers */}
           <div className="mb-12">
             <h2 className="text-white text-2xl font-bold mb-4">Danseurs / Groupes</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {show.dancers.map((dancer, index) => (
                 <div
                   key={index}
-                  className="bg-zinc-900 rounded-lg px-4 py-3 text-center"
+                  className="bg-zinc-900 rounded-lg px-5 py-4"
                 >
-                  <span className="text-white text-sm">{dancer}</span>
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <h3 className="text-white text-lg font-semibold">{dancer.name}</h3>
+                    {dancer.city && (
+                      <span className="text-xs bg-zinc-800 text-gray-300 px-2 py-1 rounded shrink-0">
+                        {dancer.city}
+                      </span>
+                    )}
+                  </div>
+                  {dancer.coaches && dancer.coaches.length > 0 && (
+                    <p className="text-gray-400 text-sm">
+                      Coach{dancer.coaches.length > 1 ? 's' : ''}: {dancer.coaches.join(', ')}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Next Show */}
+          {nextShow && (
+            <div className="mb-12">
+              <h2 className="text-white text-2xl font-bold mb-4">Prochain show</h2>
+              <Link
+                href={`/programme/${nextShow.slug}`}
+                className="group relative block aspect-video rounded-lg overflow-hidden active:scale-[0.98] transition-transform touch-manipulation"
+              >
+                <Image
+                  src={nextShow.image}
+                  alt={nextShow.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                  <div className="mb-2">
+                    <span className="inline-block px-2 py-1 bg-[#E50914] text-white text-xs font-bold rounded">
+                      {nextShow.category}
+                    </span>
+                  </div>
+                  <h3 className="text-white text-2xl sm:text-3xl font-bold mb-2">
+                    {nextShow.title}
+                  </h3>
+                  <div className="flex items-center gap-2 text-gray-300 text-sm">
+                    <span>{nextShow.subtitle}</span>
+                    <span>•</span>
+                    <span>{nextShow.duration}</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          )}
 
           {/* Related Shows */}
           {relatedShows.length > 0 && (

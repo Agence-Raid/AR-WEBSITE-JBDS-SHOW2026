@@ -10,7 +10,10 @@ export const allShows: Show[] = [
     category: 'Partie 1',
     description: 'Une performance époustouflante qui explore les limites du mouvement.',
     duration: '5 min',
-    dancers: ['Langon - Préados Julie', 'Bordeaux - JBDC'],
+    dancers: [
+      { name: 'Préados', city: 'Langon', coaches: ['Julie'] },
+      { name: 'JBDC', city: 'Bordeaux' }
+    ],
   },
   {
     id: 2,
@@ -21,7 +24,9 @@ export const allShows: Show[] = [
     category: 'Partie 1',
     description: 'Une chorégraphie innovante qui marie tradition et modernité.',
     duration: '10 min',
-    dancers: ['Groupe', 'Groupe'],
+    dancers: [
+      { name: 'Groupe mixte', coaches: ['Marie', 'Thomas'] }
+    ],
   },
   {
     id: 3,
@@ -32,7 +37,10 @@ export const allShows: Show[] = [
     category: 'Partie 2',
     description: 'Une performance époustouflante qui explore les limites du mouvement.',
     duration: '5 min',
-    dancers: ['Langon - Préados Julie', 'Bordeaux - JBDC'],
+    dancers: [
+      { name: 'Préados', city: 'Langon', coaches: ['Julie'] },
+      { name: 'JBDC', city: 'Bordeaux' }
+    ],
   },
   {
     id: 4,
@@ -43,7 +51,9 @@ export const allShows: Show[] = [
     category: 'Partie 2',
     description: 'Une chorégraphie innovante qui marie tradition et modernité.',
     duration: '10 min',
-    dancers: ['Groupe', 'Groupe'],
+    dancers: [
+      { name: 'Groupe avancé', city: 'Bordeaux', coaches: ['Sophie'] }
+    ],
   },
   {
     id: 5,
@@ -54,7 +64,9 @@ export const allShows: Show[] = [
     category: 'Partie 3',
     description: 'Une chorégraphie innovante qui marie tradition et modernité.',
     duration: '10 min',
-    dancers: ['Groupe', 'Groupe'],
+    dancers: [
+      { name: 'Ados confirmés', city: 'Langon', coaches: ['Alice', 'Marc'] }
+    ],
   },
   {
     id: 6,
@@ -65,7 +77,9 @@ export const allShows: Show[] = [
     category: 'Partie 3',
     description: 'Une chorégraphie innovante qui marie tradition et modernité.',
     duration: '10 min',
-    dancers: ['Groupe', 'Groupe'],
+    dancers: [
+      { name: 'Groupe inter', coaches: ['Laura'] }
+    ],
   },
   {
     id: 7,
@@ -76,7 +90,9 @@ export const allShows: Show[] = [
     category: 'Partie 4',
     description: 'Une chorégraphie innovante qui marie tradition et modernité.',
     duration: '10 min',
-    dancers: ['Groupe', 'Groupe'],
+    dancers: [
+      { name: 'Adultes débutants', city: 'Bordeaux', coaches: ['Emma'] }
+    ],
   },
   {
     id: 8,
@@ -87,6 +103,8 @@ export const allShows: Show[] = [
     category: 'Partie 4',
     description: 'Une chorégraphie innovante qui marie tradition et modernité.',
     duration: '10 min',
-    dancers: ['Groupe', 'Groupe'],
+    dancers: [
+      { name: 'Groupe performance', city: 'Langon', coaches: ['Sarah', 'David'] }
+    ],
   }
 ];

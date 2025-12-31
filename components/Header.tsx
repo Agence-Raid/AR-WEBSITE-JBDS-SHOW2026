@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useApp } from '@/context/AppContext';
 
@@ -63,7 +64,7 @@ export default function Header({
               </svg>
             </button>
           )}
-          <Link href="/public">
+          <Link href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-20 h-6 sm:w-24 sm:h-7 fill-[#E50914]"
@@ -176,11 +177,14 @@ export default function Header({
                   'netflix_profile=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
                 setCurrentView('profile-selection');
               }}
-              className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center active:scale-95 transition-transform touch-manipulation"
+              className="relative w-8 h-8 rounded overflow-hidden border-2 border-transparent hover:border-white active:scale-95 transition-all touch-manipulation"
             >
-              <span className="text-white text-sm font-bold">
-                {selectedProfile?.charAt(selectedProfile.length - 1)}
-              </span>
+              <Image
+                src={selectedProfile.image}
+                alt={selectedProfile.name}
+                fill
+                className="object-cover"
+              />
             </button>
           </div>
         )}

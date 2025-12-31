@@ -1,14 +1,15 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { Profile } from '@/types/profile';
 
 type AppView = 'intro' | 'profile-selection' | 'homepage';
 
 interface AppContextType {
   currentView: AppView;
-  selectedProfile: string | null;
+  selectedProfile: Profile | null;
   setCurrentView: (view: AppView) => void;
-  setSelectedProfile: (profile: string) => void;
+  setSelectedProfile: (profile: Profile) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -38,21 +39,27 @@ function setCookie(name: string, value: string, days: number): void {
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [currentView, setCurrentView] = useState<AppView>('intro');
-  const [selectedProfile, setSelectedProfileState] = useState<string | null>(null);
+  const [selectedProfile, setSelectedProfileState] = useState<Profile | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    const savedProfile = getCookie(PROFILE_COOKIE_NAME);
-    if (savedProfile) {
-      setSelectedProfileState(savedProfile);
-      setCurrentView('homepage');
+    const savedProfileId = getCookie(PROFILE_COOKIE_NAME);
+    if (savedProfileId) {
+      // Importer les profils dynamiquement pour retrouver le profil complet
+      import('@/data/profiles').then(({ profiles }) => {
+        const profile = profiles.find(p => p.id === savedProfileId);
+        if (profile) {
+          setSelectedProfileState(profile);
+          setCurrentView('homepage');
+        }
+      });
     }
     setIsInitialized(true);
   }, []);
 
-  const setSelectedProfile = (profile: string) => {
+  const setSelectedProfile = (profile: Profile) => {
     setSelectedProfileState(profile);
-    setCookie(PROFILE_COOKIE_NAME, profile, COOKIE_EXPIRY_DAYS);
+    setCookie(PROFILE_COOKIE_NAME, profile.id, COOKIE_EXPIRY_DAYS);
   };
 
   if (!isInitialized) {
