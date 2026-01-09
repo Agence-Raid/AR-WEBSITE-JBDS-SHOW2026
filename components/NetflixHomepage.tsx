@@ -12,12 +12,21 @@ export default function NetflixHomepage() {
 
       {/* Hero Banner */}
       <div className="relative h-[70vh] min-h-[500px] flex items-end pb-16 sm:pb-20">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/bg-show.webp"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/bg-show.mp4" type="video/mp4" />
+        </video>
         <Image
           src="/bg-show.webp"
           alt="Spectacle de danse"
           fill
-          priority
-          className="object-cover"
+          className="object-cover -z-10"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10" />

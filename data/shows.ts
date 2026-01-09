@@ -1,110 +1,226 @@
 import { Show } from "@/types/show";
 
 export const allShows: Show[] = [
-  {
-    id: 1,
-    title: 'Mercredi Addams',
-    subtitle: 'Show 1',
-    slug: 'show-1',
-    image: '/shows/mercredi-addams.webp',
-    category: 'Partie 1',
-    description: 'Une performance époustouflante qui explore les limites du mouvement.',
-    duration: '5 min',
-    dancers: [
-      { name: 'Préados', city: 'Langon', coaches: ['Julie'] },
-      { name: 'JBDC', city: 'Bordeaux' }
-    ],
-  },
-  {
-    id: 2,
-    title: 'Stranger Things',
-    subtitle: 'Show 2',
-    slug: 'show-2',
-    image: '/bg-show.webp',
-    category: 'Partie 1',
-    description: 'Une chorégraphie innovante qui marie tradition et modernité.',
-    duration: '10 min',
-    dancers: [
-      { name: 'Groupe mixte', coaches: ['Marie', 'Thomas'] }
-    ],
-  },
-  {
-    id: 3,
-    title: 'The Office',
-    subtitle: 'Show 3',
-    slug: 'show-3',
-    image: '/bg-show.webp',
-    category: 'Partie 2',
-    description: 'Une performance époustouflante qui explore les limites du mouvement.',
-    duration: '5 min',
-    dancers: [
-      { name: 'Préados', city: 'Langon', coaches: ['Julie'] },
-      { name: 'JBDC', city: 'Bordeaux' }
-    ],
-  },
-  {
-    id: 4,
-    title: 'La casa de Papel',
-    subtitle: 'Show 4',
-    slug: 'show-4',
-    image: '/bg-show.webp',
-    category: 'Partie 2',
-    description: 'Une chorégraphie innovante qui marie tradition et modernité.',
-    duration: '10 min',
-    dancers: [
-      { name: 'Groupe avancé', city: 'Bordeaux', coaches: ['Sophie'] }
-    ],
-  },
-  {
-    id: 5,
-    title: 'Black Mirror',
-    subtitle: 'Show 5',
-    slug: 'show-5',
-    image: '/bg-show.webp',
-    category: 'Partie 3',
-    description: 'Une chorégraphie innovante qui marie tradition et modernité.',
-    duration: '10 min',
-    dancers: [
-      { name: 'Ados confirmés', city: 'Langon', coaches: ['Alice', 'Marc'] }
-    ],
-  },
-  {
-    id: 6,
-    title: '13 reasons why',
-    subtitle: 'Show 6',
-    slug: 'show-6',
-    image: '/bg-show.webp',
-    category: 'Partie 3',
-    description: 'Une chorégraphie innovante qui marie tradition et modernité.',
-    duration: '10 min',
-    dancers: [
-      { name: 'Groupe inter', coaches: ['Laura'] }
-    ],
-  },
-  {
-    id: 7,
-    title: 'Friends',
-    subtitle: 'Show 7',
-    slug: 'show-7',
-    image: '/bg-show.webp',
-    category: 'Partie 4',
-    description: 'Une chorégraphie innovante qui marie tradition et modernité.',
-    duration: '10 min',
-    dancers: [
-      { name: 'Adultes débutants', city: 'Bordeaux', coaches: ['Emma'] }
-    ],
-  },
-  {
-    id: 8,
-    title: 'Emily in Paris',
-    subtitle: 'Show 8',
-    slug: 'show-8',
-    image: '/bg-show.webp',
-    category: 'Partie 4',
-    description: 'Une chorégraphie innovante qui marie tradition et modernité.',
-    duration: '10 min',
-    dancers: [
-      { name: 'Groupe performance', city: 'Langon', coaches: ['Sarah', 'David'] }
-    ],
-  }
+    {
+        id: 1,
+        title: 'High School Musical',
+        subtitle: 'Show 1',
+        slug: 'show-1',
+        image: '/shows/show-1.webp',
+        category: 'Comédie musicale',
+        description: 'Troy, le capitaine de l\'équipe de basket, et Gabriella, une élève modèle, se découvrent une passion commune pour le chant et l\'un pour l\'autre.',
+        duration: '8 min',
+        dancers: [
+            { name: 'Lil JBDC' },
+            { name: 'Enfants', city: 'Langon', coaches: ['Albane'] },
+            { name: 'Afro', city: 'Bordeaux', coaches: ['Lou'] }
+        ],
+    },
+    {
+        id: 2,
+        title: 'Sexy Dance',
+        subtitle: 'Show 2',
+        slug: 'show-2',
+        image: '/shows/show-2.webp',
+        category: 'Comédie musicale',
+        description: 'Pendant ses heures de travaux d\'intérêt général dans une école prestigieuse, Tyler fait la connaissance d\'une ballerine et se découvre un talent pour la danse.',
+        duration: '6 min',
+        dancers: [
+            { name: 'Préados', city: 'Langon', coaches: ['Thomas'] },
+            { name: 'Afro', city: 'Langon', coaches: ['Bianca'] },
+            { name: 'Hip Hop', city: 'Bordeaux', coaches: ['Léa'] }
+        ],
+    },
+    {
+        id: 3,
+        title: 'Michael Jackson',
+        subtitle: 'Show 3',
+        slug: 'show-3',
+        image: '/shows/show-3.webp',
+        category: 'Comédie musicale',
+        description: 'Biopic sur la légende de la musique, Michael Jackson.',
+        duration: '6 min',
+        dancers: [
+            { name: 'Baby danse' },
+            { name: 'Commercial', city: 'Langon' },
+            { name: 'Hip Hop', city: 'Langon', coaches: ['Thomas'] }
+        ],
+    },
+    {
+        id: 4,
+        title: 'K-pop',
+        subtitle: 'Show 4',
+        slug: 'show-4',
+        image: '/bg-show.webp',
+        category: 'K-pop',
+        description: 'Une chorégraphie innovante qui marie tradition et modernité.',
+        duration: '10 min',
+        dancers: [
+            { name: 'K-Pop Préados', city: 'Bordeaux', coaches: ['Lilou'] },
+            { name: 'K-Pop Enfants', city: 'Bordeaux', coaches: ['Lilou'] },
+            { name: 'Pompom' },
+            { name: 'K-Pop Adultes', city: 'Bordeaux', coaches: ['Lilou'] },
+            { name: 'Pompom UBB' },
+        ],
+    },
+    {
+        id: 5,
+        title: 'Peaky Blinders',
+        subtitle: 'Show 5',
+        slug: 'show-5',
+        image: '/shows/show-5.webp',
+        category: 'Action',
+        description: 'Birmingham, en 1919. Un gang familial règne sur un quartier de la ville : les Peaky Blinders.',
+        duration: '6 min',
+        dancers: [
+            { name: 'Ados', city: 'Langon', coaches: ['Julie'] },
+            { name: 'Break', city: 'Bordeaux', coaches: ['Last Squad'] },
+            { name: 'JBDC', coaches: ['Julie', 'Tommy'] },
+        ],
+    },
+    {
+        id: 6,
+        title: 'Fast & Furious',
+        subtitle: 'Show 6',
+        slug: 'show-6',
+        image: '/shows/show-6.webp',
+        category: 'Action',
+        description: 'La loyauté d\'un policier de Los Angeles est mise à l\'épreuve lors d\'une mission secrète au sein d\'un gang de pilotes de courses de rue soupçonné de braquages à grande vitesse.',
+        duration: '6 min',
+        dancers: [
+            { name: 'Ragga', city: 'Bordeaux', coaches: ['Maëva'] },
+            { name: 'Ragga', city: 'Langon', coaches: ['Albane'] },
+            { name: 'Afro', city: 'Bordeaux', coaches: ['Léa'] },
+        ],
+    },
+    {
+        id: 7,
+        title: 'Taxi',
+        subtitle: 'Show 7',
+        slug: 'show-7',
+        image: '/shows/show-7.webp',
+        category: 'Action',
+        description: 'Daniel est un fou du volant. Cet ex-livreur de pizzas est aujourd\'hui chauffeur de taxi et sait échapper aux radars les plus perfectionnés.',
+        duration: '10 min',
+        dancers: [
+            { name: 'Latino' },
+            { name: 'Préados', city: 'Langon' },
+            { name: 'JBDC' },
+        ],
+    },
+    {
+        id: 8,
+        title: 'Dune',
+        subtitle: 'Show 8',
+        slug: 'show-8',
+        image: '/shows/show-8.webp',
+        category: 'Drame',
+        description: 'Paul Atreides, un jeune homme brillant et doué au destin plus grand que lui-même, doit se rendre sur la planète la plus dangereuse de l\'univers afin d\'assurer l\'avenir de sa famille et de son peuple.',
+        duration: '10 min',
+        dancers: [
+            { name: 'Urban Contempo', city: 'Langon', coaches: ['Thomas'] },
+            { name: 'Préados / Enfants', city: 'Bordeaux', coaches: ['Lou'] }
+        ],
+    },
+    {
+        id: 9,
+        title: 'Interstellar',
+        subtitle: 'Show 9',
+        slug: 'show-9',
+        image: '/shows/show-9.webp',
+        category: 'Drame',
+        description: 'Tandis que l\'humanité se meurt sur Terre, un groupe d\'astronautes voyage à travers un trou de ver à la recherche d\'une autre planète habitable.',
+        duration:'6 min',
+        dancers: [
+            { name: 'Urban Contempo', coaches: ['Julie'] },
+            { name: 'Contemporain', city: 'Bordeaux', coaches: ['Maélya'] }
+        ],
+    },
+    {
+        id: 10,
+        title: '50 nuances de de Grey',
+        subtitle: 'Show 10',
+        slug: 'show-10',
+        image: '/shows/show-10.webp',
+        category: 'Romance',
+        description: 'Christian Grey, un riche homme d\'affaires, s\'intéresse à Anastasia Steele, une jeune étudiante candide qu\'il va initier à ses intenses désirs érotiques.',
+        duration: '6 min',
+        dancers: [
+            { name: 'Heels', city: 'Langon', coaches: ['Albane'] },
+            { name: 'Commercial', city: 'Bordeaux', coaches: ['Maëva'] }
+        ],
+    },
+    {
+        id: 11,
+        title: 'Elite',
+        subtitle: 'Show 11',
+        slug: 'show-11',
+        image: '/shows/show-11.webp',
+        category: 'Romance',
+        description: 'Lorsque trois ados issus de la classe ouvrière accèdent à une école élitiste d\'Espagne, le fossé qui les sépare des élèves fortunés conduit à la pire des tragédies.',
+        duration: '9 min',
+        dancers: [
+            { name: 'Ragga', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'Latino', city: 'Langon', coaches: ['Albane'] },
+            { name: 'JBDC' }
+        ],
+    },
+    {
+        id: 12,
+        title: '365 jours',
+        subtitle: 'Show 12',
+        slug: 'show-12',
+        image: '/shows/show-12.webp',
+        category: 'Romance',
+        description: 'Une femme tombe entre les mains d\'un chef mafieux dominateur qui la séquestre et lui laisse un an pour tomber amoureuse de lui.',
+        duration: '9 min',
+        dancers: [
+            { name: 'Heels', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'Dancehall', city: 'Bordeaux', coaches: ['Léa'] },
+            { name: 'Heels', city: 'Langon', coaches: ['Nelly'] }
+        ],
+    },
+    {
+        id: 13,
+        title: 'Men in black',
+        subtitle: 'Show 13',
+        slug: 'show-13',
+        image: '/shows/show-13.webp',
+        category: 'Science fiction',
+        description: 'Un bouillant policier new-yorkais forme avec un agent du gouvernement pragmatique une équipe top secrète dont la mission consiste à surveiller les aliens sur Terre.',
+        duration: '9 min',
+        dancers: [
+            { name: 'Enfants', city: 'Langon', coaches: ['Thomas'] },
+            { name: 'Préados', city: 'Bordeaux' },
+            { name: 'Commercial', city: 'Bordeaux' }
+        ],
+    },
+    {
+        id: 14,
+        title: 'Stranger Things',
+        subtitle: 'Show 14',
+        slug: 'show-14',
+        image: '/shows/show-14.webp',
+        category: 'Science fiction',
+        description: 'Quand un jeune garçon disparaît, une petite ville découvre une affaire mystérieuse, des expériences secrètes, des forces surnaturelles terrifiantes... et une fillette.',
+        duration: '6 min',
+        dancers: [
+            { name: 'JBDC' },
+            { name: 'Urban Contempo', city: 'Bordeaux', coaches: ['Julie'] },
+        ],
+    },
+    {
+        id: 15,
+        title: 'Mercredi Addams',
+        subtitle: 'Show 15',
+        slug: 'show-15',
+        image: '/shows/show-15.webp',
+        category: 'Science fiction',
+        description: 'Brillante, sarcastique et un peu morte à l\'intérieur, Mercredi Addams enquête sur une série de sombres mystères tout en se faisant des amis (et des ennemis) à l\'Académie Nevermore.',
+        duration: '6 min',
+        dancers: [
+            { name: 'Commercial', city: 'Bordeaux', coaches: ['Cherifa'] },
+            { name: 'JBDC' },
+        ],
+    },
 ];
