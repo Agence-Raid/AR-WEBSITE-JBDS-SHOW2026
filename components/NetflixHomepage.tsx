@@ -80,6 +80,13 @@ export default function NetflixHomepage() {
       {/* Categories */}
       <div className="relative z-20 pb-8 space-y-8">
         {categories.map((category, categoryIndex) => (
+          category.isEntracte ? (
+            <div key={categoryIndex} className="flex items-center gap-4 px-4 py-4 -mt-[1px]">
+              <div className="flex-1 h-px bg-white/20" />
+              <span className="text-white/50 text-sm font-light tracking-[0.3em] uppercase">{category.title}</span>
+              <div className="flex-1 h-px bg-white/20" />
+            </div>
+          ) : (
           <div key={categoryIndex}>
             <h2 className="text-white text-xl sm:text-2xl font-bold mb-3 px-4">
               {category.title}
@@ -107,6 +114,7 @@ export default function NetflixHomepage() {
               ))}
             </div>
           </div>
+          )
         ))}
       </div>
 

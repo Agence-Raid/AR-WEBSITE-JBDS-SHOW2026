@@ -11,7 +11,8 @@ export const allShows: Show[] = [
         description: 'Troy, le capitaine de l\'équipe de basket, et Gabriella, une élève modèle, se découvrent une passion commune pour le chant et l\'un pour l\'autre.',
         duration: '8 min',
         dancers: [
-            { name: 'Lil JBDC' },
+            { name: 'Intro JBDC', coaches: ['Julie'] },
+            { name: 'Lil JBDC', city: 'Bordeaux', coaches: ['Julie'] },
             { name: 'Enfants', city: 'Langon', coaches: ['Albane'] },
             { name: 'Afro', city: 'Bordeaux', coaches: ['Lou'] }
         ],
@@ -27,7 +28,7 @@ export const allShows: Show[] = [
         duration: '6 min',
         dancers: [
             { name: 'Préados', city: 'Langon', coaches: ['Thomas'] },
-            { name: 'Afro', city: 'Langon', coaches: ['Bianca'] },
+            { name: 'Afro', city: 'Langon', coaches: ['Bianca', 'Djénaïdy'] },
             { name: 'Hip Hop', city: 'Bordeaux', coaches: ['Léa'] }
         ],
     },
@@ -41,14 +42,15 @@ export const allShows: Show[] = [
         description: 'Biopic sur la légende de la musique, Michael Jackson.',
         duration: '6 min',
         dancers: [
-            { name: 'Baby danse' },
-            { name: 'Commercial', city: 'Langon' },
+            { name: 'Intro', coaches: ['Thomas'] },
+            { name: 'Commercial', city: 'Langon', coaches: ['Julie'] },
+            { name: 'Baby danse', city: 'Langon', coaches: ['Albane', 'Djénaïdy', 'Bianca', 'Julie'] },
             { name: 'Hip Hop', city: 'Langon', coaches: ['Thomas'] }
         ],
     },
     {
         id: 4,
-        title: 'K-pop',
+        title: 'Demon Hunter',
         subtitle: 'Show 4',
         slug: 'show-4',
         image: '/bg-show.webp',
@@ -56,11 +58,11 @@ export const allShows: Show[] = [
         description: 'Une chorégraphie innovante qui marie tradition et modernité.',
         duration: '10 min',
         dancers: [
-            { name: 'K-Pop Préados', city: 'Bordeaux', coaches: ['Lilou'] },
-            { name: 'K-Pop Enfants', city: 'Bordeaux', coaches: ['Lilou'] },
-            { name: 'Pompom' },
-            { name: 'K-Pop Adultes', city: 'Bordeaux', coaches: ['Lilou'] },
-            { name: 'Pompom UBB' },
+            { name: 'Intro', coaches: ['Lilou'] },
+            { name: 'Préados', city: 'Bordeaux', coaches: ['Bianca', 'Djénaïdy'] },
+            { name: 'Enfants', city: 'Bordeaux', coaches: ['Lilou'] },
+            { name: 'Pompom', city: 'Bordeaux', coaches: ['Lola'] },
+            { name: 'Adultes', city: 'Bordeaux', coaches: ['Lilou'] },
         ],
     },
     {
@@ -73,9 +75,10 @@ export const allShows: Show[] = [
         description: 'Birmingham, en 1919. Un gang familial règne sur un quartier de la ville : les Peaky Blinders.',
         duration: '6 min',
         dancers: [
+            { name: 'Intro', coaches: ['Last Squad'] },
             { name: 'Ados', city: 'Langon', coaches: ['Julie'] },
             { name: 'Break', city: 'Bordeaux', coaches: ['Last Squad'] },
-            { name: 'JBDC', coaches: ['Julie', 'Tommy'] },
+            { name: 'Team JBDC + Lil JBDC', city: 'Bordeaux', coaches: ['Julie'] },
         ],
     },
     {
@@ -88,7 +91,7 @@ export const allShows: Show[] = [
         description: 'La loyauté d\'un policier de Los Angeles est mise à l\'épreuve lors d\'une mission secrète au sein d\'un gang de pilotes de courses de rue soupçonné de braquages à grande vitesse.',
         duration: '6 min',
         dancers: [
-            { name: 'Ragga', city: 'Bordeaux', coaches: ['Maëva'] },
+            { name: 'Ragga', city: 'Bordeaux', coaches: ['Maéva'] },
             { name: 'Ragga', city: 'Langon', coaches: ['Albane'] },
             { name: 'Afro', city: 'Bordeaux', coaches: ['Léa'] },
         ],
@@ -103,9 +106,10 @@ export const allShows: Show[] = [
         description: 'Daniel est un fou du volant. Cet ex-livreur de pizzas est aujourd\'hui chauffeur de taxi et sait échapper aux radars les plus perfectionnés.',
         duration: '10 min',
         dancers: [
-            { name: 'Latino' },
-            { name: 'Préados', city: 'Langon' },
-            { name: 'JBDC' },
+            { name: 'Intro', coaches: ['Jade', 'Heloïse'] },
+            { name: 'Préados', city: 'Langon', coaches: ['Julie'] },
+            { name: 'Latino', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'JBDC', city: 'Langon', coaches: ['Albane'] },
         ],
     },
     {
@@ -118,6 +122,7 @@ export const allShows: Show[] = [
         description: 'Paul Atreides, un jeune homme brillant et doué au destin plus grand que lui-même, doit se rendre sur la planète la plus dangereuse de l\'univers afin d\'assurer l\'avenir de sa famille et de son peuple.',
         duration: '10 min',
         dancers: [
+            { name: 'Intro', coaches: ['Julie'] },
             { name: 'Urban Contempo', city: 'Langon', coaches: ['Thomas'] },
             { name: 'Préados / Enfants', city: 'Bordeaux', coaches: ['Lou'] }
         ],
@@ -132,7 +137,7 @@ export const allShows: Show[] = [
         description: 'Tandis que l\'humanité se meurt sur Terre, un groupe d\'astronautes voyage à travers un trou de ver à la recherche d\'une autre planète habitable.',
         duration:'6 min',
         dancers: [
-            { name: 'Urban Contempo', coaches: ['Julie'] },
+            { name: 'Urban Contempo', city: 'Bordeaux', coaches: ['Julie'] },
             { name: 'Contemporain', city: 'Bordeaux', coaches: ['Maélya'] }
         ],
     },
@@ -147,7 +152,7 @@ export const allShows: Show[] = [
         duration: '6 min',
         dancers: [
             { name: 'Heels', city: 'Langon', coaches: ['Albane'] },
-            { name: 'Commercial', city: 'Bordeaux', coaches: ['Maëva'] }
+            { name: 'Commercial', city: 'Bordeaux', coaches: ['Maéva'] }
         ],
     },
     {
@@ -162,7 +167,7 @@ export const allShows: Show[] = [
         dancers: [
             { name: 'Ragga', city: 'Bordeaux', coaches: ['Julie'] },
             { name: 'Latino', city: 'Langon', coaches: ['Albane'] },
-            { name: 'JBDC' }
+            { name: 'JBDC', city: 'Bordeaux', coaches: ['Lou'] },
         ],
     },
     {
@@ -175,9 +180,9 @@ export const allShows: Show[] = [
         description: 'Une femme tombe entre les mains d\'un chef mafieux dominateur qui la séquestre et lui laisse un an pour tomber amoureuse de lui.',
         duration: '9 min',
         dancers: [
-            { name: 'Heels', city: 'Bordeaux', coaches: ['Julie'] },
             { name: 'Dancehall', city: 'Bordeaux', coaches: ['Léa'] },
-            { name: 'Heels', city: 'Langon', coaches: ['Nelly'] }
+            { name: 'Heels', city: 'Langon', coaches: ['Nelly'] },
+            { name: 'Heels', city: 'Bordeaux', coaches: ['Julie'] },
         ],
     },
     {
@@ -191,8 +196,8 @@ export const allShows: Show[] = [
         duration: '9 min',
         dancers: [
             { name: 'Enfants', city: 'Langon', coaches: ['Thomas'] },
-            { name: 'Préados', city: 'Bordeaux' },
-            { name: 'Commercial', city: 'Bordeaux' }
+            { name: 'Préados', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'Commercial', city: 'Bordeaux', coaches: ['Julie'] },
         ],
     },
     {
@@ -205,7 +210,7 @@ export const allShows: Show[] = [
         description: 'Quand un jeune garçon disparaît, une petite ville découvre une affaire mystérieuse, des expériences secrètes, des forces surnaturelles terrifiantes... et une fillette.',
         duration: '6 min',
         dancers: [
-            { name: 'JBDC' },
+            { name: 'RIP JBDC', city: 'Bordeaux', coaches: ['Julie'] },
             { name: 'Urban Contempo', city: 'Bordeaux', coaches: ['Julie'] },
         ],
     },
@@ -219,8 +224,9 @@ export const allShows: Show[] = [
         description: 'Brillante, sarcastique et un peu morte à l\'intérieur, Mercredi Addams enquête sur une série de sombres mystères tout en se faisant des amis (et des ennemis) à l\'Académie Nevermore.',
         duration: '6 min',
         dancers: [
-            { name: 'Commercial', city: 'Bordeaux', coaches: ['Cherifa'] },
-            { name: 'JBDC' },
+            { name: 'Commercial', city: 'Bordeaux et Langon', coaches: ['Cherifa'] },
+            { name: 'Ragga', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'Team JBDC', city: 'Bordeaux', coaches: ['Julie'] },
         ],
     },
 ];

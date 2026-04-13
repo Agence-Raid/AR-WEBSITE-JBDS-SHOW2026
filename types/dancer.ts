@@ -1,4 +1,4 @@
-export type City = 'Bordeaux' | 'Langon';
+export type City = 'Bordeaux' | 'Langon' | 'Bordeaux et Langon';
 
 export interface Dancer {
   name: string;
