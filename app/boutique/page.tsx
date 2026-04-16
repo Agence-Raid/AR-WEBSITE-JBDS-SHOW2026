@@ -1,11 +1,19 @@
+'use client';
+
 import Image from 'next/image';
 import { allProducts } from '@/data/products';
+import { useState } from 'react';
 import Header from '@/components/Header';
 
 export default function BoutiquePage() {
-  // const [selectedCategory, setSelectedCategory] = useState<string>('Tous');
-  // const categories = ['Tous', 'Vêtements', 'Accessoires', 'Souvenirs'];
-  const filteredProducts = allProducts;
+  const [selectedCategory, setSelectedCategory] = useState<string>('Tous');
+
+  const categories = ['Tous', 'Vêtements', 'Accessoires'];
+
+  const filteredProducts =
+    selectedCategory === 'Tous'
+      ? allProducts
+      : allProducts.filter((product) => product.category === selectedCategory);
 
   return (
     <div className="fixed inset-0 bg-black overflow-y-auto overflow-x-hidden">
@@ -24,21 +32,21 @@ export default function BoutiquePage() {
           </div>
 
           {/* Category Filter */}
-          {/*<div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">*/}
-          {/*  {categories.map((category) => (*/}
-          {/*    <button*/}
-          {/*      key={category}*/}
-          {/*      onClick={() => setSelectedCategory(category)}*/}
-          {/*      className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all touch-manipulation ${*/}
-          {/*        selectedCategory === category*/}
-          {/*          ? 'bg-[#E50914] text-white'*/}
-          {/*          : 'bg-zinc-800 text-gray-300 active:bg-zinc-700'*/}
-          {/*      }`}*/}
-          {/*    >*/}
-          {/*      {category}*/}
-          {/*    </button>*/}
-          {/*  ))}*/}
-          {/*</div>*/}
+          <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all touch-manipulation ${
+                  selectedCategory === category
+                    ? 'bg-[#E50914] text-white'
+                    : 'bg-zinc-800 text-gray-300 active:bg-zinc-700'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -121,6 +129,16 @@ export default function BoutiquePage() {
           </p>
         </div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </div>
   );
 }
