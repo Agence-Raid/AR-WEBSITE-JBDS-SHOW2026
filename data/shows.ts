@@ -50,7 +50,7 @@ export const allShows: Show[] = [
     },
     {
         id: 4,
-        title: 'Demon Hunter',
+        title: 'Demon Hunters',
         subtitle: 'Show 4',
         slug: 'show-4',
         image: '/bg-show.webp',

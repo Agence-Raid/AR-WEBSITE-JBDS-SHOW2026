@@ -27,31 +27,31 @@ export default function BoutiquePage() {
               Boutique du spectacle
             </h1>
             <p className="text-gray-400 text-base sm:text-lg">
-              Souvenirs et produits disponibles pendant l&apos;entracte
+              Souvenirs et produits disponibles
             </p>
           </div>
 
           {/* Category Filter */}
-          <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all touch-manipulation ${
-                  selectedCategory === category
-                    ? 'bg-[#E50914] text-white'
-                    : 'bg-zinc-800 text-gray-300 active:bg-zinc-700'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          {/*<div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">*/}
+          {/*  {categories.map((category) => (*/}
+          {/*    <button*/}
+          {/*      key={category}*/}
+          {/*      onClick={() => setSelectedCategory(category)}*/}
+          {/*      className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all touch-manipulation ${*/}
+          {/*        selectedCategory === category*/}
+          {/*          ? 'bg-[#E50914] text-white'*/}
+          {/*          : 'bg-zinc-800 text-gray-300 active:bg-zinc-700'*/}
+          {/*      }`}*/}
+          {/*    >*/}
+          {/*      {category}*/}
+          {/*    </button>*/}
+          {/*  ))}*/}
+          {/*</div>*/}
         </div>
       </div>
 
       {/* Products Grid */}
-      <div className="px-4 pb-16">
+      <div className="px-4 pb-24">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {filteredProducts.map((product) => (
@@ -122,7 +122,7 @@ export default function BoutiquePage() {
       <div className="fixed bottom-0 left-0 right-0 bg-zinc-900/95 backdrop-blur-sm border-t border-gray-800 px-4 py-3">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-white text-sm font-semibold mb-1">
-            🎭 Les produits sont en vente pendant l&apos;entracte
+            🎭 Les produits sont en vente !
           </p>
           <p className="text-gray-400 text-xs">
             Stand situé dans le hall principal
