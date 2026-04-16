@@ -23,7 +23,7 @@ export const allProducts: Product[] = [
         id: 3,
         name: 'Sac de sport noir',
         category: 'Accessoires',
-        price: 15,
+        price: 20,
         image: '/shop/sacsport-noir.webp',
         description: 'Sac de sport noir avec logo JBDS.',
         inStock: true,
