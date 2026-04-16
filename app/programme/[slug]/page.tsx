@@ -1,40 +1,25 @@
-'use client';
-
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { allShows } from '@/data/shows';
 import Header from '@/components/Header';
+import { notFound } from 'next/navigation';
 
-export default function ShowDetailPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+export function generateStaticParams() {
+  return allShows.map((show) => ({ slug: show.slug }));
+}
 
+export default async function ShowDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const show = allShows.find((s) => s.slug === slug);
 
   if (!show) {
-    return (
-      <div className="fixed inset-0 bg-black flex items-center justify-center">
-        <div className="text-center px-4">
-          <h1 className="text-white text-3xl font-bold mb-4">
-            Show non trouvé
-          </h1>
-          <Link
-            href="/programme"
-            className="text-[#E50914] hover:underline text-lg"
-          >
-            Retour au programme
-          </Link>
-        </div>
-      </div>
-    );
+    notFound();
   }
 
   const relatedShows = allShows.filter(
     (s) => s.category === show.category && s.id !== show.id
   );
 
-  // Trouver le prochain show dans l'ordre
   const currentIndex = allShows.findIndex((s) => s.id === show.id);
   const nextShow = currentIndex < allShows.length - 1 ? allShows[currentIndex + 1] : null;
 

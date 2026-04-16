@@ -1,19 +1,11 @@
-'use client';
-
 import Image from 'next/image';
 import { allProducts } from '@/data/products';
-import { useState } from 'react';
 import Header from '@/components/Header';
 
 export default function BoutiquePage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('Tous');
-
-  const categories = ['Tous', 'Vêtements', 'Accessoires', 'Souvenirs'];
-
-  const filteredProducts =
-    selectedCategory === 'Tous'
-      ? allProducts
-      : allProducts.filter((product) => product.category === selectedCategory);
+  // const [selectedCategory, setSelectedCategory] = useState<string>('Tous');
+  // const categories = ['Tous', 'Vêtements', 'Accessoires', 'Souvenirs'];
+  const filteredProducts = allProducts;
 
   return (
     <div className="fixed inset-0 bg-black overflow-y-auto overflow-x-hidden">
@@ -129,16 +121,6 @@ export default function BoutiquePage() {
           </p>
         </div>
       </div>
-
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </div>
   );
 }

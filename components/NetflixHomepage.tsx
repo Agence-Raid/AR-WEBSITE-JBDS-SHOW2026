@@ -20,7 +20,7 @@ export default function NetflixHomepage() {
           poster="/bg-show.webp"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/bg-show.mp4" type="video/mp4" />
+          <source src="https://jbds-danceschool.fr/wp-content/uploads/2026/04/bg-show.mp4" type="video/mp4" />
         </video>
         <Image
           src="/bg-show.webp"
