@@ -78,7 +78,7 @@ export const allShows: Show[] = [
             { name: 'Intro', coaches: ['Last Squad'] },
             { name: 'Ados', city: 'Langon', coaches: ['Julie'] },
             { name: 'Break', city: 'Bordeaux', coaches: ['Last Squad'] },
-            { name: 'Team JBDC + Lil JBDC', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'Team JBDC + Lil JBDC', city: 'Bordeaux', coaches: ['Tommy', 'David', 'Julie'] },
         ],
     },
     {
@@ -109,7 +109,7 @@ export const allShows: Show[] = [
             { name: 'Intro', coaches: ['Jade', 'Heloïse'] },
             { name: 'Préados', city: 'Langon', coaches: ['Julie'] },
             { name: 'Latino', city: 'Bordeaux', coaches: ['Julie'] },
-            { name: 'JBDC', city: 'Langon', coaches: ['Albane'] },
+            { name: 'JBDC', city: 'Langon', coaches: ['Julie'] },
         ],
     },
     {
@@ -137,6 +137,7 @@ export const allShows: Show[] = [
         description: 'Tandis que l\'humanité se meurt sur Terre, un groupe d\'astronautes voyage à travers un trou de ver à la recherche d\'une autre planète habitable.',
         duration:'6 min',
         dancers: [
+            { name: 'Intro', coaches: ['Julie'] },
             { name: 'Urban Contempo', city: 'Bordeaux', coaches: ['Julie'] },
             { name: 'Contemporain', city: 'Bordeaux', coaches: ['Maélya'] }
         ],
@@ -151,6 +152,7 @@ export const allShows: Show[] = [
         description: 'Christian Grey, un riche homme d\'affaires, s\'intéresse à Anastasia Steele, une jeune étudiante candide qu\'il va initier à ses intenses désirs érotiques.',
         duration: '6 min',
         dancers: [
+            { name: 'Intro', coaches: ['Maélya'] },
             { name: 'Heels', city: 'Langon', coaches: ['Albane'] },
             { name: 'Commercial', city: 'Bordeaux', coaches: ['Maéva'] }
         ],
@@ -167,7 +169,7 @@ export const allShows: Show[] = [
         dancers: [
             { name: 'Ragga', city: 'Bordeaux', coaches: ['Julie'] },
             { name: 'Latino', city: 'Langon', coaches: ['Albane'] },
-            { name: 'JBDC', city: 'Bordeaux', coaches: ['Lou'] },
+            { name: 'JBDC', city: 'Bordeaux', coaches: ['Lou', 'Héloïse'] },
         ],
     },
     {
@@ -180,9 +182,10 @@ export const allShows: Show[] = [
         description: 'Une femme tombe entre les mains d\'un chef mafieux dominateur qui la séquestre et lui laisse un an pour tomber amoureuse de lui.',
         duration: '9 min',
         dancers: [
+            { name: 'Intro', coaches: ['Julie', 'Thomas'] },
             { name: 'Dancehall', city: 'Bordeaux', coaches: ['Léa'] },
             { name: 'Heels', city: 'Langon', coaches: ['Nelly'] },
-            { name: 'Heels', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'Heels', city: 'Bordeaux', coaches: ['Julie', '(JBDC - Lou)'] },
         ],
     },
     {
@@ -210,6 +213,7 @@ export const allShows: Show[] = [
         description: 'Quand un jeune garçon disparaît, une petite ville découvre une affaire mystérieuse, des expériences secrètes, des forces surnaturelles terrifiantes... et une fillette.',
         duration: '6 min',
         dancers: [
+            { name: 'Intro', coaches: ['Julie'] },
             { name: 'RIP JBDC', city: 'Bordeaux', coaches: ['Julie'] },
             { name: 'Urban Contempo', city: 'Bordeaux', coaches: ['Julie'] },
         ],
