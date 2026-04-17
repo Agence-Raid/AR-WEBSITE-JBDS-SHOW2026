@@ -55,7 +55,7 @@ export const allShows: Show[] = [
         slug: 'show-4',
         image: '/shows/show-4.webp',
         category: 'K-pop',
-        description: 'Une chorégraphie innovante qui marie tradition et modernité.',
+        description: 'Durant des siècles, en Corée, les démons n\'ont eu de cesse d\'attaquer les humains pour voler leurs âmes afin de nourrir Gwi-Ma, leur roi. Tout changea le jour où trois femmes apparurent comme chasseresses de démons.',
         duration: '10 min',
         dancers: [
             { name: 'Intro', coaches: ['Lilou'] },
