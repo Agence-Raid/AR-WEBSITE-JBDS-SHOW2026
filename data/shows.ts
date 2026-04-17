@@ -53,7 +53,7 @@ export const allShows: Show[] = [
         title: 'Demon Hunters',
         subtitle: 'Show 4',
         slug: 'show-4',
-        image: '/bg-show.webp',
+        image: '/shows/show-4.webp',
         category: 'K-pop',
         description: 'Une chorégraphie innovante qui marie tradition et modernité.',
         duration: '10 min',
