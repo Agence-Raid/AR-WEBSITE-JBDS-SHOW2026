@@ -68,7 +68,7 @@ export const allProducts: Product[] = [
         id: 8,
         name: 'Sac à cordons noir',
         category: 'Accessoires',
-        price: 8,
+        price: 4,
         image: '/shop/sac-cordes.webp',
         description: 'Sac à cordons noir avec logo JBDS.',
         inStock: true,
