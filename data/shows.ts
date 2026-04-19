@@ -138,7 +138,7 @@ export const allShows: Show[] = [
         duration:'6 min',
         dancers: [
             { name: 'Intro', coaches: ['Julie'] },
-            { name: 'Urban Contempo', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'Urban Contempo', city: 'Langon', coaches: ['Julie'] },
             { name: 'Contemporain', city: 'Bordeaux', coaches: ['Maélya'] }
         ],
     },
@@ -229,7 +229,7 @@ export const allShows: Show[] = [
         duration: '6 min',
         dancers: [
             { name: 'Commercial', city: 'Bordeaux et Langon', coaches: ['Cherifa'] },
-            { name: 'Ragga', city: 'Bordeaux', coaches: ['Julie'] },
+            { name: 'Ragga', city: 'Langon', coaches: ['Julie'] },
             { name: 'Team JBDC', city: 'Bordeaux', coaches: ['Julie'] },
         ],
     },
