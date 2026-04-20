@@ -73,13 +73,6 @@ export default function BoutiquePage() {
                       </span>
                     </div>
                   )}
-                  <div className="absolute top-2 right-2">
-                    <div className="bg-black/80 backdrop-blur-sm px-2 py-1 rounded">
-                      <span className="text-white font-bold text-sm">
-                        {product.price}€
-                      </span>
-                    </div>
-                  </div>
                 </div>
                 <div className="p-4">
                   <h3 className="text-white font-bold text-sm mb-1 line-clamp-2">
@@ -118,19 +111,8 @@ export default function BoutiquePage() {
         </div>
       </div>
 
-      {/* Info Banner */}
-      <div className="fixed bottom-0 left-0 right-0 bg-zinc-900/95 backdrop-blur-sm border-t border-gray-800 px-4 py-3">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-white text-sm font-semibold mb-1">
-            🎭 Les produits sont en vente !
-          </p>
-          <p className="text-gray-400 text-xs">
-            Stand situé dans le hall principal
-          </p>
-        </div>
-      </div>
 
-      <style jsx>{`
+<style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
